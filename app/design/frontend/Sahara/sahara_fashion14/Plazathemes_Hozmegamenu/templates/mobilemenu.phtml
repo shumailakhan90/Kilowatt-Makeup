@@ -1,0 +1,93 @@
+<?php
+	$data = $block->getConfig('status');
+	if(!$block->getConfig('status')) return ; 
+	$items = $block->getItemsActive();
+	$itemsActive = json_decode($items); 
+	$htmlLink = array();
+?>
+
+
+
+<?php if(count($itemsActive)): ?> 
+	 
+		<nav class="ma-nav-mobile-container visible-xs" style='display:none' >
+				<div class="navbar">
+					<div id="navbar-inner" class="navbar-inner navbar-inactive">
+										<div class="menu-mobile">
+											<a class="btn btn-navbar navbar-toggle">
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+													<span class="icon-bar"></span>
+											</a>
+											<span class="brand navbar-brand"><?php echo __('Categories') ?></span>
+										</div>
+						<ul id="ma-mobilemenu" class="mobilemenu nav-collapse collapse">
+							<?php echo $block->generateHtmlMobileMenu();  ?>
+						</ul>
+					</div>
+				</div>
+		</nav> 		
+		<script type="text/javascript">
+			require(["jquery"], function(jQuery){
+				
+				(function(jQuery){
+						 jQuery.fn.extend({  
+							 mobilemenu: function() {       
+								return this.each(function() {
+									
+									var jQueryul = jQuery(this);
+									
+									if(jQueryul.data('accordiated'))
+										return false;
+																		
+									jQuery.each(jQueryul.find('ul, li>div'), function(){
+										jQuery(this).data('accordiated', true);
+										jQuery(this).hide();
+									});
+									
+									jQuery.each(jQueryul.find('span.head'), function(){
+										jQuery(this).click(function(e){
+											activate(this);
+											return void(0);
+										});
+									});
+									
+									var active = (location.hash)?jQuery(this).find('a[href=' + location.hash + ']')[0]:'';
+
+									if(active){
+										activate(active, 'toggle');
+										jQuery(active).parents().show();
+									}
+									
+									function activate(el,effect){
+										jQuery(el).parent('li').toggleClass('active').siblings().removeClass('active').children('ul, div').slideUp('fast');
+										jQuery(el).siblings('ul, div')[(effect || 'slideToggle')]((!effect)?'fast':null);
+									}
+									
+								});
+							} 
+						}); 
+					})(jQuery);
+					jQuery("ul.mobilemenu li.level1, ul.level2 li").each(function(){ 
+						if(jQuery(this).find('li').length > 0) {
+							jQuery(this).addClass('have_sub');
+							jQuery(this).append('<span class="head"><a href="javascript:void(0)"></a></span>');
+						}
+					  });			
+					jQuery('ul.mobilemenu').mobilemenu();
+					jQuery("ul.mobilemenu li.active").each(function(){
+						jQuery(this).children().next("ul").css('display', 'block'); 
+					});
+					
+					 
+					
+				});
+		</script> 
+		<script type="text/javascript">
+		//<![CDATA[
+			var CUSTOMMENU_POPUP_EFFECT = <?php echo $block->getConfig('effect');?>;
+			var CUSTOMMENU_POPUP_TOP_OFFSET = 64;
+		//]]>
+		</script>
+<?php endif ?>
+

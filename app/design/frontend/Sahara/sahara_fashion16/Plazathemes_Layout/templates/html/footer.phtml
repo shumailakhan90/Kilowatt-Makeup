@@ -1,0 +1,50 @@
+<div class="ma-brand-slider-contain">
+	<?php echo $block->getLayout()->createBlock('Plazathemes\Brandslider\Block\Brandslider')->setTemplate('brandslider.phtml')->toHtml();?> 
+</div>
+
+<footer class="footer-container">
+	<div class="footer-middle">
+		<div class="container">
+			<?php echo $this->getChildHtml('footer-static-f16')?>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<?php echo $this->getChildHtml('footer.copyright')?>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+					<?php echo $this->getChildHtml('footer.store_switcher')?>
+					<?php echo $this->getChildHtml('footer_payment')?>
+				</div>
+			</div>
+		</div>
+		<div id="back_top">
+			<a href="#back-top"><span>top</span></a>
+		</div>
+	</div>
+</footer>
+
+<script type="text/javascript">
+	require(["jquery"], function(jQuery){
+		jQuery(window).scroll(function() {	
+			if(jQuery(this).scrollTop() > 300) {
+				jQuery('#back_top').fadeIn();   
+			} else {
+				jQuery('#back_top').fadeOut();
+			}
+		});
+		   jQuery('#back_top').click(function() {
+			jQuery('body,html').animate({scrollTop:0},500);
+		});
+		if (jQuery(window).width() < 992) {   
+			jQuery('.footer-static-title').click(function(){     
+				jQuery(this).parent('.f-col').toggleClass('active').siblings().removeClass('active'); 
+				jQuery(this).next('.f-col .footer-static-content').toggle(300);
+				jQuery(this).parent('.f-col.active').siblings().children('.f-col .footer-static-content').slideUp(300); 
+			}); 
+			 
+		}
+	});
+</script>

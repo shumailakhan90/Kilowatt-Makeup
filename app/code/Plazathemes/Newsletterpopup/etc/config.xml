@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <newsletterpopup>
+            <popup_group>
+                <enabled>1</enabled>
+                <title>NEWSLETTER</title>
+                <content>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</content>
+				<width>790</width>
+				<height>390</height>
+				<speed>600</speed> 
+				<cookie_timeout>1</cookie_timeout>  
+				<background>default/Newsletter_03.jpg</background> 
+            </popup_group>
+        </newsletterpopup>
+    </default>
+</config>

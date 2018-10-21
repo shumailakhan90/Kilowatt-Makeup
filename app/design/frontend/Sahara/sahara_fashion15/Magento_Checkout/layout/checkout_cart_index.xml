@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="checkout_cart_item_renderers"/>
+    <update handle="checkout_shipping_price_renderer"/>
+    <body>
+        <referenceBlock name="checkout.cart.crosssell" remove="true"/>
+		<referenceContainer name="checkout.cart.items">
+			<block class="Magento\Checkout\Block\Cart\Crosssell" name="crosssell" template="Magento_Catalog::product/list/crosssell.phtml" after="-">
+				<arguments>
+					<argument name="type" xsi:type="string">crosssell</argument>
+				</arguments>
+			</block>
+		</referenceContainer>
+    </body>
+</page>

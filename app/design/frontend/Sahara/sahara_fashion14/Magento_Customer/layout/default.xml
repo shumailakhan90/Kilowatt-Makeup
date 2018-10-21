@@ -1,0 +1,25 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body> 
+		<referenceBlock name="top.links">
+			<block class="Magento\Customer\Block\Account\Link" name="my-account-link">
+				<arguments>
+					<argument name="label" xsi:type="string" translate="true">My Account</argument>
+				</arguments>
+			</block>
+			<block class="Magento\Customer\Block\Account\RegisterLink" name="register-link">
+				<arguments>
+					<argument name="label" xsi:type="string" translate="true">Register</argument>
+				</arguments>
+			</block>
+			<block class="Magento\Customer\Block\Account\AuthorizationLink" name="authorization-link" template="account/link/authorization.phtml"/>
+		</referenceBlock> 
+		<referenceBlock name="header.links">
+			<block class="Magento\Customer\Block\Account\Customer" name="customer" template="account/customer.phtml" before="-"/>
+			<block class="Magento\Customer\Block\Account\AuthorizationLink" name="authorization-link-login" template="account/link/authorization.phtml"/>
+        </referenceBlock>
+		<move element="register-link" destination="header.links"/>
+		<move element="top.links" destination="customer"/>
+		<move element="authorization-link" destination="top.links" after="-"/>
+		<referenceContainer name="authorization-link-login" remove="1"/>
+	</body>
+</page>

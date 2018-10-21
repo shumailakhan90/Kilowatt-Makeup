@@ -1,0 +1,140 @@
+<?php
+/**
+ * Copyright © 2016 PlazaThemes.com. All rights reserved.
+ *
+ * @author PlazaThemes Team <contact@plazathemes.com>
+ */
+?>
+
+<?php
+/**
+ * Layered navigation Price js
+ *
+ * @var $block \Plazathemes\Layerednavigation\Block\Layerednavigation
+ */
+?>
+<script type="text/javascript">
+    //<![CDATA[
+    require(['jquery', 'jquery/ui'], function ($) {
+        var url_array = [];
+        var param_str = '';
+        var params = [];
+        var price_param = '';
+        var isPriceExist = false;
+        var filter_url = '';
+        
+
+        $(document).ready(function () {
+            var current_min_price = parseFloat($("#price-from").val());
+            var current_max_price = parseFloat($("#price-to").val());
+			var max_price = parseFloat($("#current-max-price").val());
+            $('.price-from').val(current_min_price);
+            $('.price-to').val(current_max_price);
+            $('#price-slider').slider({
+                range   : true,
+                min     : 0,
+                max     : max_price,
+                values  : [ current_min_price, current_max_price ],
+                slide   : function (event, ui) {
+                    $('#price-from').val(ui.values[0]);
+                    $('.price-from').val(ui.values[0]);
+                    $('#price-to').val(ui.values[1]);
+                    $('.price-to').val(ui.values[1]);
+                    current_min_price = ui.values[0];
+                    current_max_price = ui.values[1];
+                },
+                stop    : function (event, ui) {
+                    filter_url = $("#filter-url").val();        //  Get Filter Url
+                    url_array = filter_url.split('?');          //  Split filter_url and return array
+
+                    /* Check filter_url has parameters or not */
+                    if(url_array[1]) {      //  If filter_url has parameters
+                        param_str = url_array[1];               //  Get parameter string
+                        params = param_str.split('&');          //  Split parameter string and return parameter array
+                        params.forEach(function (param) {       //  Use forEach to check all parameters
+
+                            /*  Check when filter_url has price parameter or not */
+                            if(param.search('price') != -1) {
+                                price_param = param;
+                                isPriceExist = true;
+                            }
+                        });
+
+                        if(isPriceExist) {  // If filter_url has price parameter
+                            /* Replace old price to new price parameter  */
+                            filter_url = filter_url.replace(price_param, "price=" + current_min_price + "-" + current_max_price);
+                        } else {            // If filter_url has not price parameter
+                            /* Add price parameter */
+                            filter_url += '&price=' + current_min_price + '-' + current_max_price;
+                        }
+                    } else {                // If filter has not any parameters
+                        /* Add price parameter as the first parameter */
+                        filter_url += '?price=' + current_min_price + '-' + current_max_price;
+                    }
+                    price_param = "";
+                    isPriceExist = false;
+                    pt_ajax_layer.ajaxFilter(filter_url);
+                }
+            });
+        });
+
+        $(document).ajaxComplete(function () {
+            var current_min_price = parseFloat($("#price-from").val());
+            var current_max_price = parseFloat($("#price-to").val());
+			var max_price = parseFloat($("#current-max-price").val());
+            $('.price-from').val(current_min_price);
+            $('.price-to').val(current_max_price);
+            $('#price-slider').slider({
+                range   : true,
+                min     : 0,
+                max     : max_price,
+                values  : [ current_min_price, current_max_price ],
+                slide   : function (event, ui) {
+                    $('#price-from').val(ui.values[0]);
+                    $('.price-from').val(ui.values[0]);
+                    $('#price-to').val(ui.values[1]);
+                    $('.price-to').val(ui.values[1]);
+                    current_min_price = ui.values[0];
+                    current_max_price = ui.values[1];
+                },
+                stop    : function (event, ui) {
+                    filter_url = $("#filter-url").val();        //  Get Filter Url
+                    url_array = filter_url.split('?');          //  Split filter_url and return array
+
+                    /* Check filter_url has parameters or not */
+                    if(url_array[1]) {      //  If filter_url has parameters
+                        param_str = url_array[1];               //  Get parameter string
+                        params = param_str.split('&');          //  Split parameter string and return parameter array
+                        params.forEach(function (param) {       //  Use forEach to check all parameters
+
+                            /*  Check when filter_url has price parameter or not */
+                            if(param.search('price') != -1) {
+                                price_param = param;
+                                isPriceExist = true;
+                            }
+                        });
+
+                        if(isPriceExist) {  // If filter_url has price parameter
+                            /* Replace old price to new price parameter  */
+                            filter_url = filter_url.replace(price_param, "price=" + current_min_price + "-" + current_max_price);
+                        } else {            // If filter_url has not price parameter
+                            /* Add price parameter */
+                            filter_url += '&price=' + current_min_price + '-' + current_max_price;
+                        }
+                    } else {                // If filter has not any parameters
+                        /* Add price parameter as the first parameter */
+                        filter_url += '?price=' + current_min_price + '-' + current_max_price;
+                    }
+
+                    /* Reset condition */
+                    price_param = "";
+                    isPriceExist = false;
+
+                    /* Execute Ajax Navigation Action */
+                    pt_ajax_layer.ajaxFilter(filter_url);
+                }
+            });
+        });
+    });
+    //]]>
+</script>

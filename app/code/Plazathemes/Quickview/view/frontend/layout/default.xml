@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <css src="Plazathemes_Quickview::css/pt_quickview.css" />
+        <css src="mage/gallery/gallery.css"/>
+        <css src="Plazathemes_Quickview::css/swatches.css"/>
+        <link src="Plazathemes_Quickview::js/pt_quickview.js" />
+    </head>
+    <body>
+        <referenceContainer name="before.body.end">
+            <block class="Plazathemes\Quickview\Block\Quickview" name="quickview.container" as="quickview_container" after="-">
+                <action method="setTemplate" ifconfig="quickview/general/enabled">
+                    <argument name="template" xsi:type="string">Plazathemes_Quickview::pt_quickview_container.phtml</argument>
+                </action>
+            </block>
+        </referenceContainer>
+    </body>
+</page>

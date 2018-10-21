@@ -1,0 +1,31 @@
+<?php
+/**
+ * Copyright © 2016 PlazaThemes.com. All rights reserved.
+ *
+ * @author PlazaThemes Team <contact@plazathemes.com>
+ */
+?>
+
+<?php
+/**
+ * Ajax layered navigation Background
+ *
+ * @var $block \Plazathemes\LayeredNavigation\Block\LayeredNavigation
+ */
+?>
+<?php if($block->isEnabledModule()): ?>
+    <div class="loading-background">
+        <!-- Background when loading -->
+    </div>
+    <div class="loading-image">
+        <img src="<?php echo $block->getLoadingImage() ?>" alt="" />
+    </div>
+
+    <div class="price-filter-content">
+        <input type="hidden" id="price-from" value="0" />
+        <input type="hidden" id="price-to" value="<?php echo $block->getCurrentCategoryMaxPrice(); ?>" />
+        <input type="hidden" id="current-max-price" value="<?php echo $block->getCurrentCategoryMaxPrice(); ?>" />
+        <input type="hidden" id="filter-url" value="<?php echo $block->getCurrentUrl(); ?>" />
+    </div>
+<?php endif; ?>
+

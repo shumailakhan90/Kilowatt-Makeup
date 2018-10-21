@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+* Copyright © 2015 PlazaThemes.com. All rights reserved.
+
+* @author PlazaThemes Team <contact@plazathemes.com>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../Config/etc/system_file.xsd">
+    <system>
+        <tab id="Plazathemes" translate="label" sortOrder="100">
+            <label>Plazathemes</label>
+        </tab>
+        <section id="latesttweet" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Latest Tweet</label>
+            <tab>Plazathemes</tab>
+            <resource>Plazathemes_LatestTweet::config_latesttweet</resource>
+            <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enable_frontend" translate="label comment" type="select" sortOrder="0"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <comment>Enable frontend</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="heading_title" translate="label comment" type="text" sortOrder="5"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Heading Title</label>
+                </field>
+				<field id="tweet_show" translate="label comment" type="text" sortOrder="10"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Tweet Show</label>
+                </field>
+				<field id="show_time" translate="label comment" type="select" sortOrder="15"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Show Time</label>
+					<source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+				<field id="twitteruser" translate="label comment" type="text" sortOrder="20"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Twitter User</label>
+                </field>
+				<field id="consumerkey" translate="label comment" type="text" sortOrder="25"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Consumer Key</label>
+                </field>
+				<field id="consumersecret" translate="label comment" type="text" sortOrder="30"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Consumer Secret</label>
+                </field>
+				<field id="accesstoken" translate="label comment" type="text" sortOrder="35"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Access Token</label>
+                </field>
+				<field id="accesstokensecret" translate="label comment" type="text" sortOrder="40"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Access Token Secret</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

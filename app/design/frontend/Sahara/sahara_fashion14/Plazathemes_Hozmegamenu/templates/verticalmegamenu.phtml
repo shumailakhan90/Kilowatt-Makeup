@@ -1,0 +1,118 @@
+<?php
+	$data = $block->getConfig('status');
+	if(!$block->getConfig('status')) return ; 
+	$items = $block->getItemsActive();
+	$itemsActive = json_decode($items); 
+	$htmlLink = array();
+?>
+
+
+
+<?php if(count($itemsActive)): ?>
+			<?php  
+				$type_menu = $block->getConfig('type_menu');
+				if($type_menu==2) {
+			?>
+				
+		<div class="nav-container visible-lg visible-md">
+			<div class="megamenu-title">
+				<h2><?php echo __('Shop by') ?><span><?php echo __('Department') ?></span></h2>
+			</div>
+			<div id="pt_vmegamenu" class="pt_vmegamenu navleft-container">
+			<?php
+			$showhome = 0;
+			$active = '';
+			if($showhome){
+				$id     = "_home";
+				$html[] = '<div id="pt_menu' . $id . '" class="pt_menu' . $active . '">';
+				$html[] = '<div class="parentMenu">';
+				$html[] = '<a href="#">';
+				$html[] = '<span>Home</span>';
+				$html[] = '</a>';
+				$html[] = '</div>';
+				$html[] = '</div>';
+				$html = implode("\n", $html);
+				echo $html;
+			}
+
+				$item = 0;
+	
+				$id = null; 
+				$label = null; 
+				foreach($itemsActive as $itemActive) { 
+						$item++;
+						$item1 =  explode( '_', $itemActive ) ;
+						$label = $item1[0]; 
+						$id = $item1[1];
+						 switch ($label) {
+							case "cms":							
+									//echo $block->CmsLink($id,'desktop');								
+								break;
+							case "block":			
+									//echo $block->CustomLink($id,'desktop');
+								break;
+							case "category":									
+									echo $block->drawCustomMenuItem($id,0,false,$item);											
+								break;
+							}
+				
+		
+					?>
+					
+					
+					
+					<?php																						
+
+				}
+					?>						
+				<div class="clearBoth"></div>
+			</div>
+		</div>
+		
+		<?php } ?>
+
+
+<?php endif ?>
+
+<script type="text/javascript">
+	require(["jquery"], function(jQuery){
+		var heightIcon = jQuery('.icon-verticalmenu').outerHeight();
+		jQuery('.icon-verticalmenu').click(function() {
+			jQuery(this).next('.pt_vmegamenu').stop(true,true).toggleClass('active');
+			jQuery('.pt_vmegamenu').css({'position':'absolute','top': heightIcon});
+			if(jQuery(this).next('.pt_vmegamenu').hasClass('active')) {
+				jQuery(this).next('.pt_vmegamenu').slideDown(300); 
+			} else {
+				jQuery(this).next('.pt_vmegamenu').slideUp(300); 
+			}
+		});
+	});
+	require(["jquery"], function($){
+
+
+	   var VMEGAMENU_POPUP_EFFECT = <?php echo $block->getConfig('effect'); ?>;
+
+
+		$("#pt_menu_link ul li").each(function(){
+			var url = document.URL;
+			$("#pt_menu_link ul li a").removeClass("act");
+			$('#pt_menu_link ul li a[href="'+url+'"]').addClass('act');
+		}); 
+			
+		$('.pt_menu').hover(function(){
+			if(VMEGAMENU_POPUP_EFFECT == 0) $(this).find('.popup').stop(true,true).slideDown('slow');
+			if(VMEGAMENU_POPUP_EFFECT == 1) $(this).find('.popup').stop(true,true).fadeIn('slow');
+			if(VMEGAMENU_POPUP_EFFECT == 2) $(this).find('.popup').stop(true,true).show('slow');
+		},function(){
+			if(VMEGAMENU_POPUP_EFFECT == 0) $(this).find('.popup').stop(true,true).slideUp('fast');
+			if(VMEGAMENU_POPUP_EFFECT == 1) $(this).find('.popup').stop(true,true).fadeOut('fast');
+			if(VMEGAMENU_POPUP_EFFECT == 2) $(this).find('.popup').stop(true,true).hide('fast');
+		})
+		
+		$(".navleft-container").hide();
+		$(".nav-container").click(function(){
+			$(".navleft-container").toggle();
+		});
+	});
+</script>
+

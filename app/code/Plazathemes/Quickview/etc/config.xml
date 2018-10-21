@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 PlazaThemes.com. All rights reserved.
+ *
+ * @author PlazaThemes Team <contact@plazathemes.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <quickview>
+            <general>
+                <enabled>1</enabled>
+                <loading_image>default/loader-1.gif</loading_image>
+                <insertion>after</insertion>
+				<quickview_init>{"_1534837039163_163":{"container":".quickview-wr","item":".item-inner","element":".add-to-links","link":".product-item-photo"}}</quickview_init>
+            </general>
+        </quickview>
+    </default>
+</config>

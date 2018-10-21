@@ -1,0 +1,39 @@
+<?php
+/**
+ * Copyright © 2016 PlazaThemes.com. All rights reserved.
+ *
+ * @author PlazaThemes Team <contact@plazathemes.com>
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Product list toolbar
+ *
+ * @var $block \Plazathemes\Layerednavigation\Block\Product\ProductList\Toolbar
+ */
+use Plazathemes\Layerednavigation\Block\Product\ProductList\Toolbar;
+?>
+<div class="field limiter">
+    <label class="label" for="limiter">
+        <span><?php /* @escapeNotVerified */ echo __('Show') ?></span>
+    </label>
+    <div class="control">
+        <select id="limiter"
+                <?php if($block->isEnabledAjaxLayered()): ?>
+                    data-filter="limit"
+                <?php endif; ?>
+                data-role="limiter"
+                class="limiter-options">
+            <?php foreach ($block->getAvailableLimit() as $_key => $_limit): ?>
+                <option value="<?php /* @escapeNotVerified */ echo $_key ?>"<?php if ($block->isLimitCurrent($_key)): ?>
+                    selected="selected"<?php endif ?>>
+                    <?php /* @escapeNotVerified */ echo $_limit ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <span class="limiter-text"><?php /* @escapeNotVerified */ echo __('per page') ?></span>
+</div>

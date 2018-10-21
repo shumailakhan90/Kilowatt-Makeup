@@ -1,0 +1,120 @@
+<?php $block->renderFileLessToCss(); ?>
+
+<header id="lucian_header123" class="header-container">
+	<div class="top-link header-link visible-lg visible-md">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-xs-12">
+					<?php echo $this->getChildHtml("store_language"); ?>
+					<?php echo $this->getChildHtml("header_info"); ?>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="top-link-dropdown">
+						<?php echo $this->getChildHtml("header.links"); ?>
+					</div>
+					 <?php echo $this->getChildHtml("currency"); ?>
+					 <?php echo $this->getChildHtml("header_social"); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-content visible-lg visible-md">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-xs-12">
+					<?php echo $this->getChildHtml("top.search"); ?>
+				</div>
+				<div class="col-md-6 col-xs-12">
+					<div class="logo-home">
+						<?php echo $this->getChildHtml("logo"); ?>
+					</div>
+				</div>
+				<div class="col-md-3 col-xs-12">
+					<?php echo $this->getChildHtml("minicart");?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-mobile visible-xs">
+		<div class="container">
+			<div class="header-mobile-container"> 
+				<?php echo $this->getChildHtml("logo"); ?> 
+				<?php echo $this->getChildHtml("top.search.mobile"); ?>
+				<div class="my-account close-box">  
+					<span class="close-icon"> <?php echo __('close icon')?></span> 
+					<div id="tabs-menu">
+						<ul class="tabs">
+							<li class="tab active"><a href="#tab-content-1"><?php echo __('categories')?></a></li>
+							<li class="tab"><a href="#tab-content-2"><?php echo __('setting')?></a></li>
+						</ul>
+						<div class="tabs-content">
+							<div id="tab-content-1" class="tab-content active"><?php echo $this->getChildHtml("mobilemenu");?></div>
+							<div id="tab-content-2" class="tab-content">
+								
+								<?php echo $this->getChildHtml("header_info"); ?>
+								<?php echo $this->getChildHtml("header_social"); ?> 
+								<?php echo $this->getChildHtml("header.links"); ?> 
+
+								<?php echo $this->getChildHtml("currency.mobile"); ?>
+								<?php echo $this->getChildHtml("languages.mobile"); ?>
+								 
+							</div>
+						</div>
+						
+					</div> 
+				</div>
+				<div class="box-right">
+					<span class="open-icon"> <?php echo __('open icon')?></span> 
+					<?php echo $this->getChildHtml("minicart.mobile");?>	
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script type="text/javascript"> 
+require(["jquery"], function(jQuery){
+	jQuery(".header-mobile .open-icon").click(function() {
+		var chk=0;
+		if(jQuery('.header-mobile .my-account').hasClass('close-box') && (chk==0)) {
+			jQuery('.header-mobile .my-account').removeClass('close-box');
+			jQuery('.header-mobile .my-account').addClass('open-box'); 
+			jQuery('.header-mobile .open-icon').addClass('close-icon');    
+			chk=1;
+		}   
+		if(jQuery('.header-mobile .my-account').hasClass('open-box') && (chk==0)) {
+			jQuery('.header-mobile .my-account').removeClass('open-box');
+			jQuery('.header-mobile .my-account').addClass('close-box'); 
+			jQuery('.header-mobile .open-icon').removeClass('close-icon');   
+			chk=1;
+		} 
+	});  
+	jQuery(".header-mobile .close-icon").click(function() {
+		if(jQuery('.header-mobile .my-account').hasClass('open-box')) {
+			jQuery('.header-mobile .my-account').removeClass('open-box');
+			jQuery('.header-mobile .my-account').addClass('close-box');
+			jQuery('.header-mobile .open-icon').removeClass('close-icon'); 
+
+		}   
+	});
+	jQuery('#tabs-menu .tabs li a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('#tabs-menu ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+    // if ( jQuery(window).width() < 600 ) {
+    // 	jQuery('.header-mobile .block-search form.minisearch').hover(function(){
+    // 		jQuery('.header-mobile .block-search input').slideDown(300);  	
+    // 	}, function(){
+    // 		jQuery('.header-mobile .block-search input').slideUp(300);  
+    // 	});
+    // }
+}); 
+</script>
+

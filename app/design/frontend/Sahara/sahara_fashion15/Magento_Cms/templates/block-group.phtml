@@ -1,0 +1,19 @@
+<div class="home-new-static">
+	<div class="container">
+		<?php echo $block->getLayout()->createBlock('Magento\Newsletter\Block\Subscribe')->setTemplate('subscribe.phtml')->toHtml();?> 
+	</div>
+</div>	
+<div class="block-group box-section">
+	<div class="container">
+		<div class="container-inner">
+			<div class="row">
+				<div class="col-xs-12 col-md-3 col-sm-6 col-sms-12 col-smb-12">
+		<?php echo $block->getLayout()->createBlock('Plazathemes\Bestsellerproduct\Block\Bestsellerproduct')->setTemplate('bestsellerproduct.phtml')->toHtml();?>
+				</div>
+				<div class="col-xs-12 col-md-9 col-sm-6 col-sms-12 col-smb-12">
+		<?php echo $block->getLayout()->createBlock('Plazathemes\Newproductslider\Block\Newproductslider')->setTemplate('newproductslider.phtml')->toHtml();?> 
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="header.container">
+            <container name="header.link" htmlClass="header-link" htmlTag="div" before="-">
+				<container name="header.panel.wrapper" htmlClass="container" htmlTag="div" before="-">
+					<container name="header.row" htmlClass="row" htmlTag="div">					
+						<container name="header.left" htmlClass="col-md-6 col-xs-12" htmlTag="div">		
+							<block class="Magento\Store\Block\Switcher" name="store_language" as="store_language" template="switch/languages.phtml"/>
+							<block class="Magento\Cms\Block\Block" name="header_info">
+								<arguments>
+									<argument name="block_id" xsi:type="string">header_info</argument>
+								</arguments>
+							</block>
+						</container>
+						<container name="header.right" htmlClass="col-md-6 col-xs-12" htmlTag="div" after="-">
+							   <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+									<arguments>
+										<argument name="css_class" xsi:type="string">header links</argument>
+									</arguments>
+								</block>
+							 
+							<block class="Magento\Cms\Block\Block" name="header_social">
+								<arguments>
+									<argument name="block_id" xsi:type="string">header_social</argument>
+								</arguments>
+							</block>
+						</container>
+					</container>
+				</container>
+			</container>
+        </referenceContainer>
+		<referenceBlock name="skip_to_content" remove="true"/>
+		<referenceBlock name="register-link" remove="true"/>	
+		
+        <referenceContainer name="header-wrapper" htmlClass="header">
+			<container name="header.top" htmlClass="container" htmlTag="div" after="-">
+				<container name="header.top.row" htmlClass="row" htmlTag="div">
+					<container name="header.search" htmlClass="col-md-3 col-xs-12" htmlTag="div" before="-">							
+					</container>
+					<container name="header.logo" htmlClass="col-md-6 col-xs-12" htmlTag="div" after="header.search">					
+						<block class="Magento\Theme\Block\Html\Header\Logo" name="logo">
+							<arguments>
+								<argument name="logo_img_width" xsi:type="number">147</argument>
+								<argument name="logo_img_height" xsi:type="number">24</argument>
+							</arguments>
+						</block>
+					</container>
+					<container name="header.cart" htmlClass="col-md-3 col-xs-12" htmlTag="div" after="-">	
+					</container>
+				</container>
+			</container>
+		</referenceContainer>
+		<move element="top.search" destination="header.search" after="-"/>
+		<move element="logo" destination="header.logo" after="-"/>
+		<move element="minicart" destination="header.cart" after="-"/>
+        <referenceContainer name="page.top">
+            <block class="Magento\Framework\View\Element\Template" name="navigation.sections" before="-" template="Magento_Theme::html/sections.phtml">
+                <arguments>
+                    <argument name="group_name" xsi:type="string">navigation-sections</argument>
+                    <argument name="group_css" xsi:type="string">nav-sections</argument>
+                </arguments>
+                <block class="Magento\Framework\View\Element\Template" name="store.menu" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Menu</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Text" name="store.links" group="navigation-sections">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Account</argument>
+                        <argument name="use_force" xsi:type="boolean">true</argument>
+                        <argument name="text" xsi:type="string"><![CDATA[<!-- Account links -->]]></argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="store.settings" group="navigation-sections" template="Magento_Theme::html/container.phtml">
+                    <arguments>
+                        <argument name="title" translate="true" xsi:type="string">Settings</argument>
+                    </arguments>
+                    <block class="Magento\Store\Block\Switcher" name="store.settings.language" template="switch/languages.phtml">
+                        <arguments>
+                            <argument name="id_modifier" xsi:type="string">nav</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Directory\Block\Currency" name="store.settings.currency" before="store_language" template="currency.phtml">
+                        <arguments>
+                            <argument name="id_modifier" xsi:type="string">nav</argument>
+                        </arguments>
+                    </block>
+                </block>
+            </block>
+        </referenceContainer>
+
+		<referenceContainer name="footer-container">
+			<container name="footer.top" label="footer top" htmlTag="div" htmlClass="footer-top">
+				<container name="footer.top.container" label="footer top Container" htmlTag="div" htmlClass="container">
+					<container name="top.left.container" htmlTag="div" htmlClass="col-lg-9 col-md-9 col-xs-12">		
+						<block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="subscribe.phtml"/>
+					</container>
+					<container name="top.right.container1" htmlTag="div" htmlClass="col-lg-3 col-md-3 col-xs-12">
+						<block class="Magento\Cms\Block\Block" name="header_social1">
+							<arguments>
+								<argument name="block_id" xsi:type="string">header_social</argument>
+							</arguments>
+						</block>
+					</container>
+				</container>
+			</container>
+			 <container name="footer.static" label="footer static" htmlTag="div" htmlClass="footer-static">
+				<container name="footer.static.container" label="footer static Container" htmlTag="div" htmlClass="container">
+					<block class="Magento\Cms\Block\Block" name="footer_static">
+						<arguments>
+							<argument name="block_id" xsi:type="string">footer_static</argument>
+						</arguments>
+					</block>
+				</container>
+			</container> 
+			<container name="footer.copyright" label="footer copyright" htmlTag="div" htmlClass="footer-copyright">
+				<container name="footer.copyright.container" htmlTag="div" htmlClass="container">
+					<container name="copyright.left.container" htmlTag="div" htmlClass="col-lg-6 col-md-6 col-xs-12">	
+						<block class="Magento\Theme\Block\Html\Footer" name="my-copyright" template="html/copyright.phtml"/>
+					</container>
+					<container name="copyright.right.container" htmlTag="div" htmlClass="col-lg-6 col-md-6 col-xs-12">
+						<block class="Magento\Cms\Block\Block" name="footer_payment">
+							<arguments>
+								<argument name="block_id" xsi:type="string">footer_payment</argument>
+							</arguments>
+						</block>
+					</container>
+				</container>
+			</container>
+		</referenceContainer>
+		<referenceBlock name="copyright" remove="true"/>
+		<referenceBlock name="footer_links" remove="true"/>
+		<referenceBlock name="report.bugs" remove="true"/>
+		<move element="page.main.title" destination="col.main" after="breadcrumbs" />
+		<move element="breadcrumbs" destination="col.main" before="-" />
+		<move element="page.messages" destination="col.main" before="breadcrumbs" />
+    </body>
+</page>

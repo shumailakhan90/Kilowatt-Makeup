@@ -1,0 +1,59 @@
+<?php
+/**
+ * Copyright © 2016 PlazaThemes.com. All rights reserved.
+ *
+ * @author PlazaThemes Team <contact@plazathemes.com>
+ */
+?>
+
+<?php
+/**
+ * Product Quick View Container
+ *
+ * @var $block \Plazathemes\Quickview\Block\Quickview
+ */
+?>
+<?php if($block->isEnabledModule()): ?>
+    <?php $qvInit = $block->getQuickviewInit(); ?>
+    <?Php $insertion = $block->getInsertionPosition(); ?>
+    <div class="quickview-container">
+        <a href="javascript:pt_quickview.hideQuickViewBackground();" class="qv-close"><span><?php echo __('Close'); ?></span></a>
+
+        <div id="quickview-content">
+            <!-- Load product quick view content into here -->
+        </div>
+    </div>
+
+    <div class="quickview-load-img">
+        <img alt="" src="<?php echo $block->getLoadingImage(); ?>" />
+    </div>
+
+    <div class="quickview-background">
+        <!-- Quick View Background -->
+    </div>
+
+    <input type="hidden" class="qv-error-notification" value="<?php echo __('Product is not loaded') ?>" />
+    <input type="hidden" class="qv-button-text" value="<?php echo __('Quick View') ?>" />
+
+<script type="text/javascript">
+    require(["jquery"], function($){
+        $('.quickview-background').click(function() {
+            pt_quickview.hideQuickViewBackground();
+        });
+
+		var insertion = '<?php echo $insertion; ?>';
+        <?php foreach($qvInit as $module): ?>
+            // var container = '<?php echo $module['container']; ?>';
+            // var item = '<?php echo $module['item']; ?>';
+            // var button = '<?php echo $module['element'] ?>';
+            // var link = '<?php echo $module['link'] ?>';
+            
+            pt_quickview.initQuickViewButton('<?php echo $module['container']; ?>', '<?php echo $module['item']; ?>', '<?php echo $module['element'] ?>', '<?php echo $module['link'] ?>', insertion);
+            
+			$(document).ajaxComplete(function() {
+				pt_quickview.initQuickViewButton('<?php echo $module['container']; ?>', '<?php echo $module['item']; ?>', '<?php echo $module['element'] ?>', '<?php echo $module['link'] ?>', insertion);
+			});
+        <?php endforeach; ?>
+    });
+</script>
+<?php endif; ?>

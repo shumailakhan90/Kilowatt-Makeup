@@ -1,0 +1,127 @@
+<?php
+/**
+ * Copyright © 2015 PlazaThemes.com. All rights reserved.
+
+ * @author PlazaThemes Team <contact@plazathemes.com>
+ */
+if($this->getConfig('enable_frontend')):
+	$_imagehelper = $this->helper('Magento\Catalog\Helper\Image');
+	$image = 'category_page_grid';
+	$_productHelper = $this->helper('Magento\Catalog\Helper\Product');
+	$block = $this->getBlockProduct();
+ 
+	$auto = $this->getConfig('auto');
+	if($auto)
+		$auto = 'true';
+	else
+		$auto = 'false';
+	$default = $this->getConfig('default');
+	$desktop = $this->getConfig('desktop');
+	$desktop_small = $this->getConfig('desktop_small');
+	$tablet = $this->getConfig('tablet');
+	$mobile = $this->getConfig('mobile');
+	$rows = $this->getConfig('rows');
+	$show_next_back = $this->getConfig('show_next_back');
+	$pagination = $this->getConfig('pagination');
+	if($this->getConfig('speed'))
+		$speed = $this->getConfig('speed');
+	else
+		$speed = '3000';
+	if($show_next_back)
+		$show_next_back = 'true';
+	else
+		$show_next_back = 'false';
+	$show_navigation_control = $this->getConfig('show_navigation_control');
+	if($show_navigation_control)
+		$show_navigation_control = 'true';
+	else
+		$show_navigation_control = 'false';
+?>
+<div class="recentproduct-container">
+	<div class="">
+		<div class="footer-static-title"><h3><?php echo $this->getConfig('title') ?></h3></div>
+		<div class="owl-container footer-static-content">
+			<div class="recentproduct-slider">
+				<?php
+				$myHelper = $this->helper('Plazathemes\Themeoptions\Helper\Data');
+				$i = 0;
+				 foreach($this->getProducts() as $_product)
+				{
+								if($_product->getRotaryImage())
+									$imageRotary = $myHelper->getMedia_Url().'catalog/product/'.$_product->getRotaryImage();
+								else
+									$imageRotary = '';												
+				if($i%$rows == 0):
+				?>
+					<div class="item">
+						<div class="product-item-inner">
+							<?php
+							endif;
+								$productImage = $_imagehelper->init($_product, $image)->constrainOnly(FALSE)->keepAspectRatio(TRUE)->keepFrame(FALSE)->resize(400)->getUrl();
+							?>
+							<div class=" item-inner">
+								<div class="image-container pull-left">
+
+									<a class="product-item-photo" href="<?php echo $_product->getProductUrl() ?>"><img src="<?php echo $productImage; ?>" alt=""/>
+										<span class="image-rotator"><?php if($imageRotary): ?>
+											<img src="<?php echo $imageRotary; ?>" alt="" />
+										<?php else: ?>
+											<img src="<?php echo $productImage; ?>" alt=""/>
+										<?php endif; ?></span>
+									</a>
+								</div>
+								<div class="box-info">
+									<strong class="product-item-name">
+										<a href="<?php echo $_product->getProductUrl() ?>"><?php echo $_product->getName() ?></a>
+									</strong>
+									<div class="item-price">
+										<?php
+											echo $block->getProductPrice($_product)
+										?>
+									</div>
+								</div>
+							</div>
+							<?php if($i%$rows == $rows - 1): ?>
+						</div>
+					</div>
+					<?php
+					endif;
+					$i++;
+					}
+					?>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	require(["jquery","owlcarousel/minjs"], function($,owlCarousel){
+		$(document).ready(function(){
+			$(".recentproduct-slider").owlCarousel({
+				<?php
+					if(($auto== 'true') && $speed):
+				?>
+				autoPlay : <?php echo $speed; ?>,
+				<?php
+					endif;
+				?>
+				items : <?php echo $default; ?>,
+				itemsDesktop : [1199,<?php echo $desktop; ?>],
+				itemsDesktopSmall : [980,<?php echo $desktop_small; ?>],
+				itemsTablet: [768,<?php echo $tablet; ?>],
+				itemsMobile : [479,<?php echo $mobile; ?>],
+				slideSpeed : <?php echo $pagination; ?>,
+				paginationSpeed : <?php echo $pagination; ?>,
+				rewindSpeed : <?php echo $pagination; ?>,
+				addClassActive: true,
+				navigation : <?php echo $show_next_back; ?>,
+				stopOnHover : true,
+				pagination : <?php echo $show_navigation_control; ?>,
+				scrollPerPage:true,
+			});
+		});
+	});
+</script>
+
+<?php
+endif;
+?>

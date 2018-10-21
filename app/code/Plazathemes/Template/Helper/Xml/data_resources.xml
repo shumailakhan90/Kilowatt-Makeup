@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<ma_sahara_fashion141516>
+        <resource>
+            <title>Sahara Fashion 14 - Responsive magento theme</title>
+            <identifier>sahara-fashion14</identifier>
+            <page_layout>1column</page_layout>
+			<content><![CDATA[
+<div class="home-content">{{block class="Magento\\Cms\\Block\\Block" block_id="home-banner-static1"}} {{block class="Plazathemes\Featureproductslider\Block\Featureproductslider" name="featureproductslider" template="featureproductslider.phtml"}}</div>
+<p>{{block class="Plazathemes\Newsletterpopup\Block\Newsletterpopup" name="newsletterpopup" template="newsletterpopup.phtml"}}</p>
+			]]></content>
+            <is_active>1</is_active>
+        </resource>
+		
+		<resource>
+            <title>Sahara Fashion 15 - Responsive magento theme</title>
+            <identifier>sahara-fashion15</identifier>
+            <page_layout>1column</page_layout>
+			<content><![CDATA[
+<div class="home-content">{{block class="Plazathemes\Producttab\Block\Producttab" name="producttab" template="producttab.phtml"}}{{block class="Magento\\Cms\\Block\\Block" block_id="banner-home-content-f15"}}</div>
+<p>{{block class="Plazathemes\Newsletterpopup\Block\Newsletterpopup" name="newsletterpopup" template="newsletterpopup.phtml"}}</p>
+			]]></content>
+            <is_active>1</is_active>
+        </resource>
+		<resource>
+            <title>Sahara Fashion 16 - Responsive magento theme</title>
+            <identifier>sahara-fashion16</identifier>
+            <page_layout>1column</page_layout>
+			<content><![CDATA[
+<div class="home-content">{{block class="Plazathemes\Producttab\Block\Producttab" name="producttab" template="producttab.phtml"}}</div>
+<p>{{block class="Plazathemes\Newsletterpopup\Block\Newsletterpopup" name="newsletterpopup" template="newsletterpopup.phtml"}}</p>
+			]]></content>
+            <is_active>1</is_active>
+        </resource>
+
+
+        <resource>
+            <title>404 Not Found</title>
+            <identifier>no-route</identifier>
+			<content_heading> Whoops, our bad... </content_heading>
+            <page_layout>1column</page_layout>
+			<content><![CDATA[
+					<dl><dt>The page you requested was not found, and we have a fine guess why.</dt><dd>
+					<ul class="disc">
+					<li>If you typed the URL directly, please make sure the spelling is correct.</li>
+					<li>If you clicked on a link to get here, the link is outdated.</li>
+					</ul>
+					</dd></dl><dl><dt>What can you do?</dt><dd>Have no fear, help is near! There are many ways you can get back on track with Magento Store.</dd><dd>
+					<ul class="disc">
+					<li><a onclick="history.go(-1); return false;" href="#">Go back</a> to the previous page.</li>
+					<li>Use the search bar at the top of the page to search for your products.</li>
+					<li>Follow these links to get you back on track!<br /><a href="{{store url=""}}">Store Home</a> <span class="separator">|</span> <a href="{{store url="customer/account"}}">My Account</a></li>
+					</ul>
+					</dd></dl>
+			]]></content>
+            <is_active>1</is_active>
+        </resource>
+</ma_sahara_fashion141516>

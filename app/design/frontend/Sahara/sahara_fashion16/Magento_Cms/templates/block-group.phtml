@@ -1,0 +1,9 @@
+<div class="block-group box-section">
+<?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('ma-banner-home-f16')->toHtml();?> 
+	<div class="container">
+		<?php echo $block->getLayout()->createBlock('Plazathemes\Featureproductslider\Block\Featureproductslider')->setTemplate('featureproductslider.phtml')->toHtml();?>
+		<div class="blog-slider">
+			<?php echo $block->getLayout()->createBlock('Plazathemes\Blog\Block\Sidebar\Recent')->setTemplate('sidebar/slider.phtml')->toHtml();?> 
+		</div>
+	</div>
+</div>

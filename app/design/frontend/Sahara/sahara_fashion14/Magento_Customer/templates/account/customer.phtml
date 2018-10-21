@@ -1,0 +1,13 @@
+<?php //if($this->customerLoggedIn()): ?>
+    <li class="customer welcome customer-welcome">
+        <span class="customer name" data-mage-init='{"dropdown":{}}' data-toggle="dropdown">
+            <span><?php echo $this->getCustomerName(); ?></span>
+            <a class="account"><?php echo __('Account')?><i class="fa fa-angle-down">&nbsp;</i></a>
+        </span>
+        <?php if($this->getChildHtml()):?>
+        <div class="customer menu customer-menu" data-target="dropdown">
+            <?php echo $this->getChildHtml();?>
+        </div>
+        <?php endif; ?>
+    </li>
+<?php //endif; ?>

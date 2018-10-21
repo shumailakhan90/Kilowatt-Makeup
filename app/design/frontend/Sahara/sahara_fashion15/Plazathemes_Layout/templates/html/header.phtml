@@ -1,0 +1,137 @@
+<?php $block->renderFileLessToCss(); ?>
+
+<header id="lucian_header123" class="header-container">
+	<div class="top-link">
+		<div class="container">
+			<div class="container-inner">
+				<?php echo $this->getChildHtml("header-contact"); ?>
+				<div class="quick-top-link pull-right visible-lg visible-md">
+					<div class="top-link-dropdown">
+						<?php echo $this->getChildHtml("header.links"); ?>
+					</div>
+					<?php echo $this->getChildHtml("store_language"); ?>					
+					<?php echo $this->getChildHtml("currency"); ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-content visible-lg visible-md">
+		<div class="container">
+			<div class="header-inner">
+				<div class="row">
+					<div class="header-content-wr">
+						<div class="top-logo col-xs-12 col-md-3 visible-lg visible-md">
+							<div class="logo-home">
+								<?php echo $this->getChildHtml("logo"); ?>
+							</div>
+						</div>
+						<div class="topSearch col-xs-12 col-md-9 visible-lg visible-md">
+							<?php echo $this->getChildHtml("header-static"); ?>
+						</div>
+					</div>
+					<div class="search-cart">
+						<?php echo $this->getChildHtml("top.search"); ?>
+						<?php echo $this->getChildHtml("minicart");?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom visible-lg visible-md">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 col-sm-0 col-sms-12">
+					<div class="row">
+						<?php echo $block->getLayout()->createBlock('Plazathemes\Hozmegamenu\Block\Menu')->setTemplate('hozmegamenu.phtml')->toHtml();?> 
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-mobile visible-xs">
+		<div class="container">
+			<div class="header-mobile-container"> 
+				<?php echo $this->getChildHtml("top.search.mobile"); ?>
+				<?php echo $this->getChildHtml("logo"); ?> 
+				<div class="my-account close-box">  
+					<span class="close-icon"> <?php echo __('close icon')?></span> 
+					<div id="tabs-menu">
+						<ul class="tabs">
+							<li class="tab active"><a href="#tab-content-1"><?php echo __('categories')?></a></li>
+							<li class="tab"><a href="#tab-content-2"><?php echo __('setting')?></a></li>
+						</ul>
+						<div class="tabs-content">
+							<div id="tab-content-1" class="tab-content active"><?php echo $this->getChildHtml("mobilemenu");?></div>
+							<div id="tab-content-2" class="tab-content">
+								
+								<?php echo $this->getChildHtml("header_info"); ?>
+								<?php echo $this->getChildHtml("header_social"); ?> 
+								<?php echo $this->getChildHtml("header.links"); ?> 
+								<?php echo $this->getChildHtml("currency.mobile"); ?>
+								<?php echo $this->getChildHtml("languages.mobile"); ?>
+								 
+							</div>
+						</div>
+						
+					</div> 
+				</div>
+				<div class="box-right">
+					<span class="open-icon mb-icon"> <?php echo __('open icon')?></span>  
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+
+<script type="text/javascript"> 
+require(["jquery"], function(jQuery){
+	jQuery(".header-mobile .open-icon").click(function() {
+		var chk=0;
+		if(jQuery('.header-mobile .my-account').hasClass('close-box') && (chk==0)) {
+			jQuery('.header-mobile .my-account').removeClass('close-box');
+			jQuery('.header-mobile .my-account').addClass('open-box'); 
+			jQuery('.header-mobile .open-icon').addClass('close-icon');    
+			chk=1;
+		}   
+		if(jQuery('.header-mobile .my-account').hasClass('open-box') && (chk==0)) {
+			jQuery('.header-mobile .my-account').removeClass('open-box');
+			jQuery('.header-mobile .my-account').addClass('close-box'); 
+			jQuery('.header-mobile .open-icon').removeClass('close-icon');   
+			chk=1;
+		} 
+	});  
+	jQuery(".header-mobile .close-icon").click(function() {
+		if(jQuery('.header-mobile .my-account').hasClass('open-box')) {
+			jQuery('.header-mobile .my-account').removeClass('open-box');
+			jQuery('.header-mobile .my-account').addClass('close-box');
+			jQuery('.header-mobile .open-icon').removeClass('close-icon'); 
+
+		}   
+	});
+	jQuery('#tabs-menu .tabs li a').on('click', function(e)  {
+        var currentAttrValue = jQuery(this).attr('href');
+ 
+        // Show/Hide Tabs
+        jQuery('#tabs-menu ' + currentAttrValue).show().siblings().hide();
+ 
+        // Change/remove current tab to active
+        jQuery(this).parent('li').addClass('active').siblings().removeClass('active');
+ 
+        e.preventDefault();
+    });
+    if ( jQuery(window).width() < 600 ) {
+     	jQuery('.header-mobile .block-search .block-title').click(function(){
+    		jQuery('.header-mobile .block-search .block-content').append('<span class="close-icon">close-icon</span>').slideDown(300);  
+			jQuery('.header-mobile .block-search .block-content .close-icon').click(function(){
+				jQuery(this).parent('.header-mobile .block-search .block-content').slideUp(300); 
+				jQuery(this).remove();				
+			} );
+     	} ); 
+    }
+	
+	if(jQuery(window).width() < 992) {
+		jQuery('.minicart-moveable').insertAfter(jQuery('.mb-icon'));
+	}	
+}); 
+</script>
+

@@ -1,0 +1,59 @@
+<?php
+/**
+ * Copyright © 2016 PlazaThemes.com. All rights reserved.
+ *
+ * @author PlazaThemes Team <contact@plazathemes.com>
+ */
+
+// @codingStandardsIgnoreFile
+
+?>
+<?php
+/**
+ * Product list toolbar
+ *
+ * @var $block \Plazathemes\Layerednavigation\Block\Product\ProductList\Toolbar
+ */
+use Plazathemes\Layerednavigation\Block\Product\ProductList\Toolbar;
+?>
+<?php if ($block->getCollection()->getSize()): ?>
+    <div class="toolbar toolbar-products"
+        <?php if(!$block->isEnabledAjaxLayered()): ?>
+            data-mage-init='<?php /* @escapeNotVerified */ echo $block->getWidgetOptionsJson(); ?>'
+        <?php endif; ?>>
+        <?php if($block->isEnabledAjaxLayered()): ?>
+            <?php if ($block->isExpanded()): ?>
+                <?php include ($block->getTemplateFile('Plazathemes_Layerednavigation::product/list/toolbar/viewmode.phtml')) ?>
+            <?php endif; ?>
+			<div class="left-toolbar">
+				<?php include ($block->getTemplateFile('Plazathemes_Layerednavigation::product/list/toolbar/amount.phtml')) ?>
+
+				<?php echo $block->getPagerHtml() ?>
+
+				<?php include ($block->getTemplateFile('Plazathemes_Layerednavigation::product/list/toolbar/limiter.phtml')) ?>
+
+				<?php if ($block->isExpanded()): ?>
+					<?php include ($block->getTemplateFile('Plazathemes_Layerednavigation::product/list/toolbar/sorter.phtml')) ?>
+				<?php endif; ?>
+			</div>
+        <?php else: ?>
+            <?php if ($block->isExpanded()): ?>
+                <?php include ($block->getTemplateFile('product/list/toolbar/viewmode.phtml')) ?>
+            <?php endif; ?>
+			<div class="left-toolbar">
+				<?php include ($block->getTemplateFile('product/list/toolbar/amount.phtml')) ?>
+
+				<?php echo $block->getPagerHtml() ?>
+
+				<?php include ($block->getTemplateFile('product/list/toolbar/limiter.phtml')) ?>
+
+				<?php if ($block->isExpanded()): ?>
+					<?php include ($block->getTemplateFile('product/list/toolbar/sorter.phtml')) ?>
+				<?php endif; ?>
+			</div>
+			</div>
+        <?php endif; ?>
+    </div>
+<?php endif ?>
+
+

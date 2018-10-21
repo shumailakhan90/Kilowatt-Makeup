@@ -1,0 +1,89 @@
+<?xml version="1.0" standalone="yes"?>  
+<bannerslider>
+<records>
+	<record> 
+		<name>slide1</name>
+		<title1></title1>
+		<title2></title2>
+		<click_url>#</click_url> 
+		<image><![CDATA[Plazathemes/bannerslider/images/1/1/1170x642a.jpg]]></image>
+		<image_alt><![CDATA[]]></image_alt>
+		<description></description>
+		<order>0</order>
+		<store_id>1</store_id> 
+		<status>1</status> 
+	</record>
+	<record> 
+		<name>slide2</name>
+		<title1></title1>
+		<title2></title2>
+		<click_url>#</click_url>
+		<image><![CDATA[Plazathemes/bannerslider/images/b/a/banner7_01.jpg]]></image>
+		<image_alt><![CDATA[]]></image_alt>
+		<description></description>
+		<order>0</order>
+		<store_id>1</store_id> 
+		<status>1</status> 
+	</record>
+	<record> 
+		<name>slide1h2</name>
+		<title1></title1>
+		<title2></title2>
+		<click_url>#</click_url>
+		<image><![CDATA[Plazathemes/bannerslider/images/4/7/470x568.jpg]]></image>
+		<image_alt><![CDATA[]]></image_alt>
+		<description></description>
+		<order>0</order>
+		<store_id>2</store_id> 
+		<status>1</status> 
+	</record>
+	<record> 
+		<name>slide2h2</name>
+		<title1></title1>
+		<title2></title2>
+		<click_url>#</click_url>
+		<image><![CDATA[Plazathemes/bannerslider/images/b/a/banner7-32.jpg]]></image>
+		<image_alt><![CDATA[]]></image_alt>
+		<description></description>
+		<order>0</order>
+		<store_id>2</store_id> 
+		<status>1</status> 
+	</record>
+	<record> 
+		<name>slide3h2</name>
+		<title1></title1>
+		<title2></title2>
+		<click_url>#</click_url>
+		<image><![CDATA[Plazathemes/bannerslider/images/m/a/ma-banner2.jpg]]></image>
+		<image_alt><![CDATA[]]></image_alt>
+		<description></description>
+		<order>0</order>
+		<store_id>2</store_id> 
+		<status>1</status> 
+	</record>
+	<record> 
+		<name>sahara style</name>
+		<title1>GET UP TO 50% SALE</title1>
+		<title2>Lorem ipsum dolor sit amet, consectetuer adipiscin...</title2>
+		<click_url>#</click_url>
+		<image><![CDATA[Plazathemes/bannerslider/images/b/g/bg-slider1.jpg]]></image>
+		<image_alt><![CDATA[]]></image_alt>
+		<description></description>
+		<order>0</order>
+		<store_id>3</store_id> 
+		<status>1</status> 
+	</record>
+	<record> 
+		<name>sahara style</name>
+		<title1>GET UP TO 50% SALE</title1>
+		<title2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</title2>
+		<click_url>#</click_url>
+		<image><![CDATA[Plazathemes/bannerslider/images/s/l/slider22.jpg]]></image>
+		<image_alt><![CDATA[]]></image_alt>
+		<description></description>
+		<order>0</order>
+		<store_id>3</store_id> 
+		<status>1</status> 
+	</record>
+</records>
+</bannerslider>

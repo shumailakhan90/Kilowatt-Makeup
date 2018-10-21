@@ -1,0 +1,424 @@
+/**
+ * Copyright © 2015 PlazaThemes.com. All rights reserved.
+
+ * @author PlazaThemes Team <contact@plazathemes.com>
+ */
+ 
+
+.pt-banner-container {
+ .owl-carousel { 
+		&:hover{
+			.owl-controls {
+				.owl-buttons{
+					display:block;
+				}				
+			}
+		}
+        .owl-controls {
+            .owl-buttons {
+				display:none;
+                div { 
+					.opacity(1);
+					.transition();
+					width: 40px;
+					height: 40px;
+					margin: -15px 0 0;
+					display: block;
+					background:#b0b0b0 url(../images/arrows.png) no-repeat 0 0;
+					position: absolute;
+					top: 50%; 
+					cursor: pointer;
+					text-indent: -9999px;
+					z-index: 9;	
+					border-radius:0;
+                    &:hover {
+						background-color: #e87058 !important;
+                    }
+                    &:before {
+                    }
+                    &.owl-prev {
+                        left: 5px;
+                        &:before {
+							display:none;						
+                            content: "\f053";
+                        }
+                    }
+                    &.owl-next {
+						background-position: 100% 100%;						
+						right: 5px;
+                        &:before {
+							display:none;
+                            content: "\f054";
+                        }
+                    }
+                }
+            }
+            .owl-pagination {
+				position: absolute;
+				bottom: 10px;
+				text-align: center;
+				right: 0;
+				left: 0;
+                .owl-page {
+                    span {
+						border: 0 none;
+						display: inline-block;
+						height:8px;
+						margin: 0 3px;
+						text-indent: -9999px;
+						width:8px;
+						line-height: 8px;
+						cursor: pointer;
+						position: relative;
+						z-index: 9;
+						background-color: #fff;
+						border-radius: 100%;					
+                        .transition();
+                    } 
+                    &:hover, &.active {
+                        span {
+							cursor: pointer;
+							width: 10px;
+							line-height: 10px;
+							height: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .pt-url {
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    .pt-banner-caption {
+        position: absolute;
+		top: 30%;
+		right: 0;
+		left: 0;
+		text-align: center;
+		max-width: 80%;
+		margin: 0 auto;		
+        .pt-banner-content {
+            h1, h2, h3 {
+                display:block;
+            } 
+            .pt-title1 {
+				margin-bottom: 40px;
+				font-size:3em;
+				color: #fff;
+                -webkit-animation: moveFromBottom 1500ms ease-in-out;
+                -moz-animation: moveFromBottom 1500ms ease-in-out;
+                -ms-animation: moveFromBottom 1500ms ease-in-out;
+                animation: moveFromBottom 1500ms ease-in-out;
+            }
+            .pt-title2 {
+				margin-bottom: 40px;
+				font-weight: 700;
+				font-size: 4.5em;
+				color: #fff;
+                -webkit-animation: moveFromBottom 1800ms ease-in-out;
+                -moz-animation: moveFromBottom 1800ms ease-in-out;
+                -ms-animation: moveFromBottom 1800ms ease-in-out;
+                animation: moveFromBottom 1800ms ease-in-out;
+            }
+            .pt-title3 {
+				color: #fff;
+				line-height:1.8;
+				margin-bottom: 10px;				
+                -webkit-animation: moveFromBottom 2200ms ease-in-out;
+                -moz-animation: moveFromBottom 2200ms ease-in-out;
+                -ms-animation: moveFromBottom 2200ms ease-in-out;
+                animation: moveFromBottom 2200ms ease-in-out;
+            }
+			.pt-banner-des {
+				-webkit-animation: bounceInLeft 2000ms ease-in-out;
+                -moz-animation: bounceInLeft 2000ms ease-in-out;
+                -ms-animation: bounceInLeft 2000ms ease-in-out;
+                animation: bounceInLeft 2000ms ease-in-out;
+				p {
+					color:#f8484a;
+					font-size:90px;
+					margin-top:10px;
+					font-weight:600;
+					span {
+						font-size:20px;
+						text-transform:uppercase;
+						font-weight:700;
+					}
+				}
+			}
+            .shopnow {
+				background: #fff;
+				font-size: 12px;
+				padding: 10px 30px;
+				text-transform: uppercase;
+				font-weight: bold;
+				display: inline-block;
+				border: 1px solid #444;
+				margin: 20px 0 0;				
+                .transition();
+                -webkit-animation: bounceInLeft 2500ms ease-in-out;
+                -moz-animation: bounceInLeft 2500ms ease-in-out;
+                -ms-animation: bounceInLeft 2500ms ease-in-out;
+                animation: bounceInLeft 2500ms ease-in-out; 
+                &:hover {
+					background-color:#e87058;
+					color: #fff;
+                }
+            }
+        }
+    }
+	#pt-banner-caption2.pt-banner-caption {
+		.pt-banner-content {
+			.pt-title1 {
+				margin-bottom: 40px;
+				font-size:3em;
+				color: #fff;
+				-webkit-animation: bounceInLeft 1800ms ease-in-out;
+				-moz-animation: bounceInLeft 1800ms ease-in-out;
+				-ms-animation: bounceInLeft 1800ms ease-in-out;
+				animation: bounceInLeft 1800ms ease-in-out;
+			}
+			.pt-title2 {
+				margin-bottom: 40px;
+				font-weight: 700;
+				font-size: 4.5em;
+				color: #fff;
+				-webkit-animation: bounceInLeft 2000ms ease-in-out;
+				-moz-animation: bounceInLeft 2000ms ease-in-out;
+				-ms-animation: bounceInLeft 2000ms ease-in-out;
+				animation: bounceInLeft 2000ms ease-in-out;
+			}
+			.pt-title3 {
+				-webkit-animation: bounceInLeft 2200ms ease-in-out;
+				-moz-animation: bounceInLeft 2200ms ease-in-out;
+				-ms-animation: bounceInLeft 2200ms ease-in-out;
+				animation: bounceInLeft 2200ms ease-in-out;
+				color: #fff;
+				line-height:1.8;
+				margin-bottom: 10px;
+			}
+			.pt-banner-des {
+				position:absolute;
+				top:0;
+				left:40px;
+				-webkit-animation: bounceInLeft 1500ms ease-in-out;
+				-moz-animation: bounceInLeft 1500ms ease-in-out;
+				-ms-animation: bounceInLeft 1500ms ease-in-out;
+				animation: bounceInLeft 1500ms ease-in-out;
+				p {
+					color:#636363;
+					font-size:100px;
+					margin-top:10px;
+					font-weight:700;
+					position:relative;
+					padding-left:30px;
+					span {
+						font-size:60px;
+						text-transform:uppercase;
+						font-weight:400;
+						position:absolute;
+						top:0;
+						left:0;
+					}
+				}
+			}
+			.shopnow {
+				&:hover {
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+    .pt-banner-container {
+        .owl-carousel {
+            .owl-controls {
+                .owl-buttons {
+                    div {
+                        &:before {
+                        }   
+                    }
+                }
+            }
+        }
+        .pt-banner-caption {
+			top:20%;
+            .pt-banner-content {
+                .pt-title1 {
+                }
+                .pt-title2 {
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .pt-banner-container {
+        .owl-carousel {
+            .owl-controls {
+                .owl-buttons {
+                    div {
+                    }
+                }
+            }
+        }
+        .pt-banner-caption {
+            .pt-banner-content {
+                .pt-title1 {
+					margin-bottom:25px;
+                }
+                .pt-title2 {
+					font-size:3em;
+					margin-bottom:20px;
+                }
+				.shopnow {
+					margin:0;
+				}				
+            }
+        }
+		#pt-banner-caption2.pt-banner-caption {
+			.pt-banner-content {
+                .pt-title1 {
+					margin-bottom:25px;
+                }				
+				.pt-title2 {
+					font-size:3em;
+					margin-bottom:20px;
+				}	
+				.pt-title2 {
+					font-size:3em;
+					margin-bottom:20px;
+				}
+			}
+		}
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pt-banner-container { 
+        .pt-banner-caption {
+			display:none !important;
+            .pt-banner-content {
+                .pt-title1 {
+                    font-size:30px;
+                }
+                .pt-title2 {
+                    letter-spacing: 4px;
+                    font-size: 17px;
+                }
+				.pt-banner-des {
+					p {
+						font-size:45px;
+					}
+				}
+				.shopnow {
+					margin:0;
+				}
+            }
+        }
+		#pt-banner-caption2.pt-banner-caption {
+
+			.pt-banner-content {
+				.pt-banner-des {
+					p {
+						font-size:50px;
+						span {
+							font-size:35px;
+						}
+					}
+				}
+				.pt-title1 {
+					font-size:26px;
+				}
+				.pt-title2 {
+					font-size:8px;
+				}
+				.shopnow {
+					margin:15px 0 0;
+				}
+			}
+		}
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pt-banner-container { 
+        .pt-banner-caption {
+
+            .pt-banner-content {
+                .pt-title1 {
+                    font-size:23px;
+                }
+                .pt-title2 {
+                    letter-spacing:1px;
+                    font-size: 10px;
+                }
+				.pt-banner-des {
+					p {
+						font-size:28px;
+						margin:6px 0 0;
+					}
+				}
+				.shopnow {
+					margin:0;
+					font-size:11px;
+					line-height:30px;
+					padding:0 10px;
+				}
+            }
+        }
+		#pt-banner-caption2.pt-banner-caption {
+
+			.pt-banner-content {
+				padding-top:35px;
+				.pt-banner-des {
+					p {
+						font-size:25px;
+						padding-left:10px;
+						span {
+							font-size:16px;
+						}
+					}
+				}
+				.pt-title1 {
+					font-size:16px;
+				}
+				.pt-title2 {
+					font-size:8px;
+				}
+				.shopnow {
+					margin:10px 0 0;
+					font-size:11px;
+					line-height:30px;
+					padding:0 10px;
+				}
+			}
+		}
+    }
+}
+@media screen and (max-width: 350px) {
+    .pt-banner-container { 
+        .pt-banner-caption {
+            margin-top: -60px;
+            .pt-banner-content {
+                .pt-title1 {
+                    font-size: 25px;
+                    line-height: 25px;
+                }
+                .pt-title2 {
+                    letter-spacing: 0;
+                    font-size: 13px;
+                }
+                .shopnow {
+                    margin-top: 20px;
+                }
+            }
+        }
+    }
+}

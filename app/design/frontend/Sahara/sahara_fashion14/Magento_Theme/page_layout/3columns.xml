@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_layout.xsd">
+    <container name="root">
+        <container name="after.body.start" as="after.body.start" before="-" label="Page Top"/>
+        <container name="page.wrapper" as="page_wrapper" htmlTag="div" htmlClass="page-wrapper">  
+            <container name="header.box" as="header_box" before="main.content"/> 
+            <container name="global.notices" as="global_notices" before="-"/>
+			<container name="page.top" as="page_top" label="After Page Header" after="header.box"/>
+            <container name="main.content" htmlTag="main" htmlId="maincontent" htmlClass="main-content page-main">
+				<container name="columns.top" label="Before Main Columns" before="-"/>
+                <container name="container" htmlTag="div" htmlClass="container">
+                    <container name="row" htmlTag="div" htmlClass="row"> 
+                        <container name="col.left" htmlTag="div" htmlClass="col-left col-xs-12 col-sm-3"> 
+                            <container name="div.sidebar.main" htmlTag="div" htmlClass="sidebar sidebar-main1">
+                                <container name="sidebar.main" as="sidebar_main" label="Sidebar Main"/>
+                            </container> 
+                        </container>
+                        <container name="col.main" htmlTag="div" htmlClass="col-main columns col-xs-12 col-sm-6"> 
+                            <container name="main" label="Main Content Container" htmlTag="div" htmlClass="main"/>
+                        </container>
+                        <container name="col.right" htmlTag="div" htmlClass="col-right col-xs-12 col-sm-3">  
+                            <container name="div.sidebar.additional" htmlTag="div" htmlClass="sidebar" after="div.sidebar.main">
+                                <container name="sidebar.additional" as="sidebar_additional" label="Sidebar Additional"/>
+                            </container>
+                        </container>
+                    </container>
+                    
+                </container>
+            </container>
+			<container name="page.bottom.container" as="page_bottom_container" label="Before Page Footer Container" after="main.content" htmlTag="div" htmlClass="page-bottom"/>
+            <container name="footer.box" as="footer_box" after="main.content"/> 
+			<container name="before.body.end" as="before_body_end" after="-" label="Page Bottom"/>
+        </container>
+    </container>
+</layout>  

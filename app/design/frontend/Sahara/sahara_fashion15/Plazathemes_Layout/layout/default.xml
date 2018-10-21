@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+
+    <body> 
+		<referenceContainer name="header.box">
+            <block class="Plazathemes\Layout\Block\Layout" name="lucian_header" template="html/header.phtml" before="-">
+				<block class="Magento\Cms\Block\Block" name="header-static">
+					<arguments>
+						<argument name="block_id" xsi:type="string">header-static</argument>
+					</arguments>
+				</block>
+				<block class="Magento\Cms\Block\Block" name="header-contact">
+					<arguments>
+						<argument name="block_id" xsi:type="string">header-contact</argument>
+					</arguments>
+				</block>
+                <block class="Magento\Framework\View\Element\Html\Links" name="header.links">
+                    <arguments>
+                        <argument name="css_class" xsi:type="string">header links</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Framework\View\Element\Template" name="top.search" as="topSearch" template="Magento_Search::form.mini.phtml" />
+                <block class="Plazathemes\Hozmegamenu\Block\Menu" name="mobile.menu" as="mobilemenu" template="mobilemenu.phtml"/>
+                
+                <block class="Magento\Framework\View\Element\Template" name="top.search.mobile" as="topSearchmobile" template="Magento_Search::form.mini.mobile.phtml" />  
+            </block> 
+           
+            <block class="Magento\Directory\Block\Currency" name="currency.mobile" template="currency_mobile.phtml"/>
+            <block class="Magento\Store\Block\Switcher" name="languages.mobile" template="switch/languages_mobile.phtml"/>   
+        </referenceContainer> 
+		<move element="navigation.sections" destination="lucian_header"/>
+		<move element="logo" destination="lucian_header"/>
+		<move element="top.search" destination="lucian_header"/>
+		<move element="store_language" destination="lucian_header"/>
+		<move element="currency" destination="lucian_header"/>
+		<move element="skip_to_content" destination="lucian_header"/>
+		<move element="minicart" destination="lucian_header"/>
+		<move element="minicart.mobile" destination="lucian_header"/>
+		<move element="top.search.mobile" destination="lucian_header"/>
+		<move element="currency.mobile" destination="lucian_header"/>
+		<move element="languages.mobile" destination="lucian_header"/>
+		<referenceContainer name="header.container" remove="1"/>
+		<referenceContainer name="header.panel" remove="1"/>
+		<referenceContainer name="header-wrapper" remove="1"/>
+		<referenceBlock name="catalog.compare.sidebar" remove="true"/>
+		<referenceBlock name="wishlist_sidebar" remove="true"/>
+		<referenceContainer name="col.left">
+			<block class="Magento\Cms\Block\Block" name="banner_left">
+				<arguments>
+					<argument name="block_id" xsi:type="string">banner_left</argument>
+				</arguments>
+			</block>
+			
+		</referenceContainer>	
+		<referenceContainer name="footer.box">
+            <block class="Plazathemes\Layout\Block\Layout" name="footer_block" template="html/footer.phtml">
+                <block class="Magento\Store\Block\Switcher" name="footer.store_switcher" template="switch/stores.phtml"/>
+				<block class="Magento\Cms\Block\Block" name="footer_static">
+					<arguments>
+						<argument name="block_id" xsi:type="string">footer_static</argument>
+					</arguments>
+				</block>
+				<container name="footer.copyright" label="footer copyright" htmlTag="div" htmlClass="footer-copyright"> 
+			       <block class="Magento\Theme\Block\Html\Footer" name="my-copyright" template="html/copyright.phtml"/> 
+			    </container> 
+				<block class="Magento\Cms\Block\Block" name="footer-end">
+					<arguments>
+						<argument name="block_id" xsi:type="string">footer-end</argument>
+					</arguments>
+				</block>
+            </block>
+        </referenceContainer>
+		<referenceBlock name="report.bugs" remove="1"/>
+		<referenceBlock name="footer_links" remove="1"/>
+    </body>
+</page>

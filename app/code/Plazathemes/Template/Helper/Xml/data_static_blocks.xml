@@ -1,0 +1,457 @@
+<?xml version="1.0"?>
+<ma_sahara_fashion141516>
+    <blocks>
+	
+		<block>
+            <title>Header Contact</title>
+            <identifier>header-contact</identifier>
+            <content>
+				<![CDATA[
+					<div class="quick-access pull-left"><!-- <p class="welcome-msg">Default welcome msg! </p>-->
+					<div class="toplink-static clearfix">
+					<div class="contact-email pull-left"><em class="fa fa-envelope"></em>contact@plazathemes.com</div>
+					<div class="tell-phone pull-left"><em class="fa fa-phone"></em>(+800) 123 456 7890</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Header Static</title>
+            <identifier>header-static</identifier>
+            <content>
+				<![CDATA[
+					<div class="header-static">
+					<div class="row">
+					<div class="f-col f-col-1 col-sm-4 col-md-4 col-sms-4 col-smb-12">
+					<div class="f-col-inner">
+					<div class="pull-left"><em class="shapes">&nbsp;</em><em class="fa fa-truck"></em></div>
+					<div class="media-body">
+					<h3>FREE SHIPPING</h3>
+					<p>Free shipping on oder over $99.00</p>
+					</div>
+					</div>
+					</div>
+					<div class="f-col f-col-2 col-sm-4 col-md-4 col-sms-4 col-smb-12">
+					<div class="f-col-inner">
+					<div class="pull-left"><em class="shapes">&nbsp;</em><em class="fa fa-usd"></em></div>
+					<div class="media-body">
+					<h3>MONEY BACK GUARANTEE</h3>
+					<p>30 days money back guarantee !</p>
+					</div>
+					</div>
+					</div>
+					<div class="f-col f-col-3 col-sm-4 col-md-4 col-sms-4 col-smb-12">
+					<div class="f-col-inner">
+					<div class="pull-left"><em class="shapes">&nbsp;</em><em class="fa fa-lock"></em></div>
+					<div class="media-body">
+					<h3>PAYMENT SECURED</h3>
+					<p>Secure your online store payment</p>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Pt Menu Id Cat</title>
+            <identifier>pt_menu_idcat_3</identifier>
+            <content>
+				<![CDATA[
+					<div class="custom-menu-bottom">
+					<div class="custom-menu-bottom-inner">
+					<div class="row">
+					<div class="col-sm-6"><a href="{{store url='women.html'}}"><img src="{{media url="wysiwyg/img_menu_01.png"}}" alt="" /></a></div>
+					<div class="col-sm-6"><a href="{{store url='men.html'}}"><img src="{{media url="wysiwyg/images_sale.png"}}" alt="" /></a></div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Home Banner Static 1</title>
+            <identifier>home-banner-static1</identifier>
+            <content>
+				<![CDATA[
+					<div class="home-banner-static1 row">
+					<div class="ca-box ca-box1 col-sm-4 col-md-4 col-sms-12 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='women.html'}}"><img src="{{media url="wysiwyg/img_banner01.jpg"}}" alt="" /></a></div>
+					</div>
+					</div>
+					<div class="ca-box ca-box2 col-sm-4 col-md-4 col-sms-12 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='jewellery.html'}}"><img src="{{media url="wysiwyg/img_banner02.jpg"}}" alt="" /></a></div>
+					</div>
+					</div>
+					<div class="ca-box ca-box3 col-sm-4 col-md-4 col-sms-12 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='men.html'}}"><img src="{{media url="wysiwyg/img_banner03.jpg"}}" alt="" /></a></div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Footer Static</title>
+            <identifier>footer_static</identifier>
+            <content>
+				<![CDATA[
+					<div class="container-inner">
+					<div class="footer-static-top">
+					<div class="row">
+					<div class="f-col f-col-1 col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>ABOUT US</h3>
+					</div>
+					<div class="footer-static-content"><a class="logo-fashion" href=" #"> <img src="http://demo.saharathemes.com/ma_sahara_fashion1415/media/wysiwyg/logo_sahara.png" alt="" /> </a>
+					<p class="des">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas...</p>
+					</div>
+					</div>
+					<div class="f-col f-col-2 col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>CONTACT US</h3>
+					</div>
+					<div class="footer-static-content">
+					<ul>
+					<li><span class="fa fa-map-marker">&nbsp;</span>
+					<p>1234 Heaven Stress, Beverly Hill <span>OldYork- United State of Lorem</span></p>
+					</li>
+					<li><span class="fa fa-mobile">&nbsp;</span>
+					<p>(800) 0123 4567 890 <span>(800) 0987 654 321</span></p>
+					</li>
+					<li><span class="fa fa-envelope-o">&nbsp;</span>
+					<p>Support1@plazathemes.com<span>Support2@plazathemes.com</span></p>
+					</li>
+					</ul>
+					</div>
+					</div>
+					<div class="f-col f-col-3 col-sm-6 col-md-3 col-sms-6 col-smb-12">{{block class="Plazathemes\LatestTweet\Block\LatestTweet" template="latesttweet.phtml"}}</div>
+					<div class="f-col f-col-4 col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>CUSTOM BLOCK</h3>
+					</div>
+					<div class="footer-static-content"><a class="static-block" href="#"> <img src="{{media url="wysiwyg/img-static-block.png"}}" alt="" /> </a></div>
+					</div>
+					</div>
+					</div>
+					<div class="footer-static-bottom">
+					<div class="row">
+					<div class="f-col f-col-5 col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>OUR SERVICES</h3>
+					</div>
+					<div class="footer-static-content">
+					<ul>
+					<li class="first"><a href="#">About us</a></li>
+					<li><a href="#">Order History</a></li>
+					<li><a href="#">Returns</a></li>
+					<li><a href="#">Custom Service</a></li>
+					<li class="last"><a href="#">Terms & Condition</a></li>
+					</ul>
+					</div>
+					</div>
+					<div class="f-col f-col-6 col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>our support</h3>
+					</div>
+					<div class="footer-static-content ">
+					<ul>
+					<li class="first"><a href="#">Sitemap</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Your Account</a></li>
+					<li><a href="#">Advanced Search</a></li>
+					<li class="last"><a href="#">Contact Us</a></li>
+					</ul>
+					</div>
+					</div>
+					<div class="f-col f-col-7 col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>MY ACCOUNT</h3>
+					</div>
+					<div class="footer-static-content">
+					<ul>
+					<li class="first"><a href="#">My Account</a></li>
+					<li><a href="#">Order History</a></li>
+					<li><a href="#">Returns</a></li>
+					<li><a href="#">Specials</a></li>
+					<li class="last"><a href="#">Site Map</a></li>
+					</ul>
+					</div>
+					</div>
+					<div class="f-col f-col-8 col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>information</h3>
+					</div>
+					<div class="footer-static-content">
+					<ul>
+					<li class="first"><a href="#">About us</a></li>
+					<li><a href="#">Delivery Information</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Custom Service</a></li>
+					<li class="last"><a href="#">Terms & Condition</a></li>
+					</ul>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Footer End</title>
+            <identifier>footer-end</identifier>
+            <content>
+				<![CDATA[
+					<div class="footer">
+					<div class="row">
+					<div class="footer-inner">
+					<div class="col-xs-12 col-sm-6">
+					<div class="links-company">
+					<ul>
+					<li class="first"><a href="#">Sitemap</a></li>
+					<li><a href="#">Advanced Search</a></li>
+					<li><a href="#">Contact Us</a></li>
+					<li><a href="#">Customer Service</a></li>
+					<li class="last"><a href="#">Privacy Policy</a></li>
+					</ul>
+					</div>
+					<address>Copyright &copy; 2017 <a href="http://www.plazathemes.com/">Plazathemes.com</a>. All Rights Reserved.</address></div>
+					<div class="col-xs-12 col-sm-6">
+					<ul class="footer_links footer_payment">
+					<li><img src="http://demo.saharathemes.com/ma_sahara_fashion1415/media/wysiwyg/paypal.png" alt="" /></li>
+					</ul>
+					</div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>	
+		<block>
+            <title>Banner Left</title>
+            <identifier>banner-left</identifier>
+            <content>
+				<![CDATA[
+					<div class="banner-left hidden-xs"><a href="{{store url='women.html'}}"><img src="{{media url="wysiwyg/banner-left.jpg"}}" alt="" /></a></div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Ma Banner 2</title>
+            <identifier>ma-banner2</identifier>
+            <content>
+				<![CDATA[
+					<div class="ma-banner2">
+					<div class="row">
+					<div class="box-col box-col-1 col-md-6 col-sm-6 col-sms-6 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='women.html'}}"><img src="{{media url="wysiwyg/shoes.jpg"}}" alt="" /></a></div>
+					</div>
+					</div>
+					<div class="box-col box-col-2 col-md-6 col-sm-6 col-sms-6 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='men.html'}}"><img src="{{media url="wysiwyg/luxury.jpg"}}" alt="" /></a></div>
+					</div>
+					</div>
+					</div>
+					<div class="row">
+					<div class="box-col box-col-3 col-md-6 col-sm-6 col-sms-6 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='footwear.html'}}"><img src="{{media url="wysiwyg/handbags.jpg"}}" alt="" /></a></div>
+					</div>
+					</div>
+					<div class="box-col box-col-4 col-md-6 col-sm-6 col-sms-6 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='jewellery.html'}}"><img src="{{media url="wysiwyg/new2014.jpg"}}" alt="" /></a></div>
+					</div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Banner Home Content f15</title>
+            <identifier>banner-home-content-f15</identifier>
+            <content>
+				<![CDATA[
+					<div class="banner-home-content">
+					<div class="row">
+					<div class="box-left col-md-3 col-sm-3 col-sms-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='women.html'}}"> <img src="{{media url="wysiwyg/images-static-01.png"}}" alt="" /> </a></div>
+					<div class="ca-content">
+					<p>Lorem Ipsum is simply dummy text of the printing</p>
+					<a class="icon-button" href="{{store url='women.html'}}">SHOP NOW</a></div>
+					</div>
+					</div>
+					<div class="box-right col-md-9 col-sm-9 col-sms-12">
+					<div class="row">
+					<div class="f-col f-col-1 col-md-8 col-sm-8 col-sms-6 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='women.html'}}"> <img src="{{media url="wysiwyg/images-static-02.png"}}" alt="" /> </a></div>
+					<div class="ca-content">
+					<p>Lorem Ipsum is simply dummy text of the printing</p>
+					<a class="icon-button" href="{{store url='women.html'}}">SHOP NOW</a></div>
+					</div>
+					</div>
+					<div class="f-col f-col-2 col-md-4 col-sm-4 col-sms-6 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='women.html'}}"> <img src="{{media url="wysiwyg/images-static-03.png"}}" alt="" /> </a></div>
+					</div>
+					</div>
+					</div>
+					<div class="row">
+					<div class="f-col f-col-3 col-md-6 col-sm-6 col-sms-6 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='women.html'}}"> <img src="{{media url="wysiwyg/images-static-04.png"}}" alt="" /> </a></div>
+					<div class="ca-content">
+					<p>Lorem Ipsum is simply dummy text of the printing</p>
+					<a class="icon-button" href="{{store url='women.html'}}">SHOP NOW</a></div>
+					</div>
+					</div>
+					<div class="f-col f-col-4 col-md-6 col-sm-6 col-sms-6 col-smb-12">
+					<div class="box-content">
+					<div class="ca-img"><a href="{{store url='women.html'}}"> <img src="{{media url="wysiwyg/images-static-05.png"}}" alt="" /> </a></div>
+					<div class="ca-content">
+					<p>Lorem Ipsum is simply dummy text of the printing</p>
+					<a class="icon-button" href="{{store url='women.html'}}">SHOP NOW</a></div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>	
+		<block>
+            <title>Header Shipping</title>
+            <identifier>header-shipping</identifier>
+            <content>
+				<![CDATA[
+					<div class="header-shipping">
+					<ul>
+					<li><i class="fa fa-plane">&nbsp;</i><strong>Free shipping </strong>on order over $200</li>
+					<li><i class="fa fa-rotate-left">&nbsp;</i><strong>Transaction save</strong> 100% money back</li>
+					</ul>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Ma Banner Home f16</title>
+            <identifier>ma-banner-home-f16</identifier>
+            <content>
+				<![CDATA[
+					<div class="ma-banner-home">
+					<div class="container-fluid">
+					<div class="banner-home"><a href="{{store url='women.html'}}"><img src="{{media url="wysiwyg/banner21.jpg"}}" alt="" /></a> <a href="{{store url='women.html'}}"><img src="{{media url="wysiwyg/banner31.jpg"}}" alt="" /></a> <a href="{{store url='women.html'}}"><img src="{{media url="wysiwyg/banner12.jpg"}}" alt="" /></a> <a href="{{store url='women.html'}}"><img src="{{media url="wysiwyg/banner41.jpg"}}" alt="" /></a></div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Footer Static f16</title>
+            <identifier>footer-static-f16</identifier>
+            <content>
+				<![CDATA[
+					<div class="footer-static">
+					<div class="row">
+					<div class="f-col col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>Our services</h3>
+					</div>
+					<div class="footer-static-content">
+					<ul>
+					<li class="first"><a href="#">About us</a></li>
+					<li><a href="#">Order History</a></li>
+					<li><a href="#">Returns</a></li>
+					<li><a href="#">Custom Service</a></li>
+					<li class="last"><a href="#">Terms &amp; Condition</a></li>
+					</ul>
+					</div>
+					</div>
+					<div class="f-col col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>our support</h3>
+					</div>
+					<div class="footer-static-content">
+					<ul>
+					<li class="first"><a href="#">Sitemap</a></li>
+					<li><a href="#">Privacy Policy</a></li>
+					<li><a href="#">Your Account</a></li>
+					<li><a href="#">Advanced Search</a></li>
+					<li class="last"><a href="#">Contact Us</a></li>
+					</ul>
+					</div>
+					</div>
+					<div class="f-col col-sm-6 col-md-3 col-sms-6 col-smb-12">{{block class="Plazathemes\Recentproductslider\Block\Products" name="Recentproductslider" template="productslider.phtml"}}</div>
+					<div class="f-col col-sm-6 col-md-3 col-sms-6 col-smb-12">
+					<div class="footer-static-title">
+					<h3>Stay up to date</h3>
+					</div>
+					<div class="footer-static-content ">{{block class="Magento\Newsletter\Block\Subscribe" name="form.subscribe" as="subscribe" before="-" template="subscribe.phtml"}}</div>
+					<div class="footer-static-title">
+					<h3>Follow</h3>
+					</div>
+					<div class="footer-static-content ">
+					<ul class="link-follow">
+					<li class="first"><a class="facebook fa fa-facebook" href="#"><span>facebook</span></a></li>
+					<li><a class="twitter fa fa-twitter" href="#"><span>twitter</span></a></li>
+					<li><a class="pinterest fa fa-pinterest" href="#"><span>pinterest</span></a></li>
+					<li class="last"><a class="google fa fa-google-plus" href="#"><span>google </span></a></li>
+					</ul>
+					</div>
+					</div>
+					</div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>	
+		<block>
+            <title>Footer Payment</title>
+            <identifier>footer_payment</identifier>
+            <content>
+				<![CDATA[
+					<ul class="payment">
+					<li><a href="#"><img src="{{media url="wysiwyg/payment.png"}}" alt="" /></a></li>
+					</ul>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+		<block>
+            <title>Banner Left F16</title>
+            <identifier>banner-left-f16</identifier>
+            <content>
+				<![CDATA[
+					<div class="banner-left block">
+					<div class="box-col"><a href="{{store url='women.html'}}"> <img src="{{media url="wysiwyg/banner_left_f16.jpg"}}" alt="" /> </a></div>
+					</div>
+				]]>
+            </content>
+            <is_active>1</is_active>
+        </block>
+			
+    </blocks>
+</ma_sahara_fashion141516>

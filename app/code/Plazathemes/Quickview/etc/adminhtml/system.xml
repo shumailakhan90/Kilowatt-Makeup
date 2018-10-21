@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2016 PlazaThemes.com. All rights reserved.
+ *
+ * @author PlazaThemes Team <contact@plazathemes.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="plaza" translate="label" sortOrder="100">
+            <label>Plazathemes</label>
+        </tab>
+        <section id="quickview" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Product Quickview</label>
+            <tab>plaza</tab>
+            <resource>Plazathemes_Quickview::config_quickview</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Information</label>
+                <field id="enabled" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="loading_image" translate="label comment" type="image" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Loading Image</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Image</backend_model>
+                    <upload_dir config="system/filesystem/media" scope_info="1">catalog/quickview/images</upload_dir>
+                    <base_url type="media" scope_info="1">catalog/quickview/images</base_url>
+                    <comment>Allowed file types: jpeg, gif, png.</comment>
+                </field>
+                <field id="quickview_init" translate="label comment tooltip" sortOrder="15" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Quick View Initialization</label>
+                    <frontend_model>Plazathemes\Quickview\Block\System\Config\Form\Field\Quickviewelements</frontend_model>
+                    <backend_model>Magento\Config\Model\Config\Backend\Serialized\ArraySerialized</backend_model>
+                    <comment>
+                        <![CDATA[
+                            Quick View Initialization for Modules
+                            <br /><strong>Container:</strong> The class name or id which contains the module you want show Quick View
+                            <br /><strong>Item Identifier:</strong> The class name or id of the product item
+                            <br /><strong>Button Identifier:</strong> The class name or id which you want it contains the Quick View button
+                            <br /><strong>Link Identifier:</strong> The class name or id of element which have product link
+                            <br /><br />
+                            <strong>Format:</strong> .{classname} or #{id}
+                            <br />Example: <b>.class-name</b> or <b>#id-container</b>
+                        ]]>
+                    </comment>
+                </field>
+                <field id="insertion" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Button Insertion</label>
+                    <source_model>Plazathemes\Quickview\Model\Config\Source\Insertion</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

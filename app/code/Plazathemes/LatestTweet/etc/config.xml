@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+* Copyright © 2015 PlazaThemes.com. All rights reserved.
+
+* @author PlazaThemes Team <contact@plazathemes.com>
+*/
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+	    <latesttweet>
+	        <general>
+	            <enable_frontend>1</enable_frontend>
+	            <heading_title>Latest Tweets</heading_title>
+	            <tweet_show>1</tweet_show>
+	            <show_time>1</show_time>
+	            <twitteruser>plazathemes</twitteruser>
+	            <consumerkey>qulMEXc9RpNgvdHniZsKCQ</consumerkey>
+	            <consumersecret>9Wk7UwrlfkeR8BaKU1Nz7gS6Y3wQ2oMAuRTSPdwSpo</consumersecret>
+	            <accesstoken>167448460-MuUwtTxWoehX4MKL8KrEbP6pkLnsQf0p3NKuiUGz</accesstoken>
+	            <accesstokensecret>DKVQipT6cdOpnRELDxlsC3Mf5Rf20TA2IdUU6dzaqg</accesstokensecret>
+	        </general>
+	    </latesttweet>
+	</default>
+</config>

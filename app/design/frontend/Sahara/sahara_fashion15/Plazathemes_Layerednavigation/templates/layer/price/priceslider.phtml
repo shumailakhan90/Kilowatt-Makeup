@@ -1,0 +1,16 @@
+<?php
+/**
+ * Layered navigation Price Slider
+ *
+ * @var $block \Plazathemes\LayeredNavigation\Block\LayeredNavigation
+ */
+?>
+<?php $currency_symbol = $block->getCurrencySymbol(); ?>
+<div class="price-filter-container">
+    <div id="price-slider"></div>
+    <div class="price-range">
+        <div class="box-price"><span class="price-symbol"><?php echo $currency_symbol; ?></span><input type="text" class="price-from text-price" value="0" disabled="disabled" /></div>
+        <span><?php echo __('-'); ?></span>
+        <div class="box-price"><span class="price-symbol"><?php echo $currency_symbol; ?></span><input type="text" class="price-to text-price" value="<?php echo $block->getCurrentCategoryMaxPrice(); ?>" disabled="disabled" /></div>
+    </div>
+</div>

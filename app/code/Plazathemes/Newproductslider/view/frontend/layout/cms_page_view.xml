@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+	<head> 
+		<!-- <css src="Plazathemes_Newproductslider::css/owl.theme.css"/>  -->
+	</head>
+    <body>
+        <referenceContainer name="main.bottom">
+           <!-- <block class="Plazathemes\Newproductslider\Block\Newproductslider" name="newproductslider" template="newproductslider.phtml" /> -->
+        </referenceContainer>
+    </body>
+</page>
